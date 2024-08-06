@@ -118,6 +118,8 @@ WHERE industry LIKE 'United States%';
 -- The dtype of the date column is text, convert it to the date format
 UPDATE layoffs_copy_2
 SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
+-- if the format is 'dd-mm-yyyy' use STR_TO_DATE(`date`, '%d/%m/%Y')
+
 
 -- After having the date format, finally convert it into the date dtype
 ALTER TABLE layoffs_copy_2
