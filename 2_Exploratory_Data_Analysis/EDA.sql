@@ -145,8 +145,8 @@ ORDER BY
 WITH Rolling_Total AS (
 SELECT 
     SUBSTRING(`date`, 1, 7) AS year_and_month,
-  -- (string before delimeter ',')  SUBSTRING(`date`, 1, CHARINDEX(',', `date`) -1) AS year_and_month,
-  -- (string after delimeter ',')   SUBSTRING(`date`, CHARINDEX(',', `date`) +1, LEN(`date`)) AS year_and_month,
+  -- (string before delimeter ',')  SUBSTRING(`date`, 1, LOCATE(',', `date`) -1) AS before_delimeter,
+  -- (string after delimeter ',')   SUBSTRING(`date`, LOCATE(',', `date`) +1, LENGTH(`date`)) AS after_delimeter,
     SUM(total_laid_off) AS total_off
 FROM 
     layoffs_copy_2
