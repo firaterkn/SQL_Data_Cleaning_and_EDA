@@ -168,7 +168,7 @@ FROM
 
 
 
--- Top 5 companies by layoffs per year
+-- Top 3 companies by layoffs per year
 WITH Company_Year AS (
 SELECT company, YEAR(`date`) AS 'year', SUM(total_laid_off) AS total
 FROM layoffs_copy_2
@@ -183,5 +183,5 @@ FROM Company_Year
 
 SELECT *
 FROM Company_year_rank
-WHERE Ranking <= 5;
+WHERE Ranking <= 3;
 
