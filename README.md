@@ -165,6 +165,53 @@ ORDER BY 3 DESC;
 
 ```
 
+# Result
+
+![Visual](https://github.com/firaterkn/SQL_Data_Cleaning_and_EDA/blob/main/2_Exploratory_Data_Analysis/Max_laid_off_in_a_day.PNG)
+
+# Insights About the Graph
+
+- As seen in the image, Booking.com made the most daily layoffs by laying off 4.3k people in one day on July 30, 2020.
+  
+- Another thing to note is that Uber laid off a total of 6.7k people in May.
+
+
+# 2. Which industry experienced the highest number of layoffs??
+
+### Visusalize Data
+
+
+```SQL
+SELECT industry, SUM(total_laid_off) AS total_laid_off
+FROM layoffs_copy_2
+GROUP BY industry
+ORDER BY 2 DESC
+LIMIT 5;
+```
+
+# Result
+
+![Visual](https://github.com/firaterkn/SQL_Data_Cleaning_and_EDA/blob/main/2_Exploratory_Data_Analysis/Max_laid_off_in_a_day.PNG)
+
+# Insights About the Graph
+
+- As seen in the image, Booking.com made the most daily layoffs by laying off 4.3k people in one day on July 30, 2020.
+  
+- Another thing to note is that Uber laid off a total of 6.7k people in May.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
